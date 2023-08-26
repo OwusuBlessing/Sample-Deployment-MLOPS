@@ -28,7 +28,7 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or component")
 
         try:
-            df  = pd.read_csv(r"C:\Users\User\Desktop\Blessing_AI\mlops_project\Sample-Deployment-MLOPS\Notebooks\data\stud_data.csv")
+            df  = pd.read_csv(r"Notebooks\data\stud_data.csv")
             logging.info("Read datasets as dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
