@@ -28,7 +28,7 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or component")
 
         try:
-            df  = pd.read_csv(r'C:\Users\ME\Desktop\Blessing_AI\Sample_Deployment\Notebooks\data\stud_data.csv')
+            df  = pd.read_csv(r"C:\Users\User\Desktop\Blessing_AI\mlops_project\Sample-Deployment-MLOPS\Notebooks\data\stud_data.csv")
             logging.info("Read datasets as dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
@@ -54,8 +54,8 @@ if __name__ == "__main__":
         train_data,test_data = obj.initiate_data_ingestion()
         data_transformation = DataTransformation()
         train_arr,test_arr,_= data_transformation.initiate_data_transformer(train_data,test_data)
-        modeltraine = ModelTrainer()
-        print(modeltraine.initiate_model_training(train_arr,test_arr))
+        modeltrainer = ModelTrainer()
+        print(modeltrainer.initiate_model_training(train_arr,test_arr))
 
 
             

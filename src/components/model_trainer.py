@@ -19,7 +19,6 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.model_selection import RandomizedSearchCV
 import catboost
 from catboost import CatBoostRegressor
-from xgboost import XGBRegressor
 from dataclasses import dataclass
 from src.exception import CustomException
 from src.logger import logging
@@ -49,8 +48,7 @@ class ModelTrainer:
     "Ridge": Ridge(),
     "K-Neighbors Regressor": KNeighborsRegressor(),
     "Decision Tree": DecisionTreeRegressor(),
-    "Random Forest Regressor": RandomForestRegressor(),
-    "XGBRegressor": XGBRegressor(), 
+  
     "CatBoosting Regressor": CatBoostRegressor(verbose=False),
     "AdaBoost Regressor": AdaBoostRegressor()
 }

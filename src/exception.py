@@ -1,8 +1,7 @@
 import logging
 import sys #used to manipulate different part of python enviroment
 #import logging
-import logger
-from logger import logging
+from src.logger import logging
 
 
 def error_message_detail(error,error_detail:sys):
